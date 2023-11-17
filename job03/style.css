@@ -1,29 +1,30 @@
 section{
     background-color: #88c1d0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    display: inline;
     padding: 100px;
     margin: 60px;
 }
 
 
-@media (min-width:768px ) and (max-width: 1599px) {
-    section{
+@media (min-width: 1600px){
+    div {
         display: flex;
-        flex-wrap: wrap;
         flex-direction: row;
-
-    }
-
+    }        
 }
 
-    @media (max-width: 768px){
-        section{
-            display: flex;
-            flex-direction: column;
-    
-        }
 
+@media (max-width: 1599px) {
+    div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }   
+}
+
+
+@media (max-width: 767px) {
+    div {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
     }
+}
